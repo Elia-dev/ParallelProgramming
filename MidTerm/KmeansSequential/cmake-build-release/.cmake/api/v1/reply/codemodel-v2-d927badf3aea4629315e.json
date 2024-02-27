@@ -1,0 +1,60 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Release-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.27"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"name" : "Release",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "KmeansSequential",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "KmeansSequential::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-KmeansSequential-Release-6829ab78410a74733d76.json",
+					"name" : "KmeansSequential",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/elia/Scrivania/Universita/Magistrale/ParallelProgramming/ParallelProgrammingProject/MidTerm/KmeansSequential/cmake-build-release",
+		"source" : "/home/elia/Scrivania/Universita/Magistrale/ParallelProgramming/ParallelProgrammingProject/MidTerm/KmeansSequential"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}
