@@ -1,0 +1,5 @@
+Laptop System: LENOVO ThinkPad X280
+Distro: Debian GNU/Linux trixie/sid
+Kernel: 6.6.15-amd64
+CPU: dual core (4 threads) model: Intel Core i5-7300U 64 bits 2.6 Ghz
+Memory: 8 GB
