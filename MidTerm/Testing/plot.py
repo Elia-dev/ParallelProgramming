@@ -1,42 +1,42 @@
 import matplotlib.pyplot as plt
 import matplotlib.colors as mcolors
 import csv
-def leggi_file_csv(nome_file):
+def leggi_file_csv(file_name):
     points = []
-    centroidi = []
+    centroids = []
 
-    with open(nome_file, 'r') as file:
+    with open(file_name, 'r') as file:
         reader = csv.reader(file)
-        for riga in reader:
-            elemento = list(map(float, riga))
-            if len(elemento) == 3:  # If there is a third value, then it's a point otherwise is a centroid
-                punti.append(elemento)
+        for row in reader:
+            element = list(map(float, row))
+            if len(element) == 3:  # If there is a third value, then it's a point otherwise is a centroid
+                points.append(element)
             else:
-                centroidi.append(elemento)
-    return punti, centroidi
+                centroids.append(element)
+    return points, centroids
 
-def disegna_punti_e_centroidi(punti, centroidi):
+def disegna_punti_e_centroidi(points, centroids):
 
-    punti_x = [punto[0] for punto in punti]
-    punti_y = [punto[1] for punto in punti]
+    points_x = [point[0] for point in points]
+    points_y = [point[1] for point in points]
 
-    centroidi_x = [centroide[0] for centroide in centroidi]
-    centroidi_y = [centroide[1] for centroide in centroidi]
+    centroids_x = [centroid[0] for centroid in centroids]
+    centroids_y = [centroid[1] for centroid in centroids]
 
     # Color based by the associeted cluster
-    #colori = ['c', 'y', 'b', 'orange', 'm', 'g', 'k', 'purple']  # Possibili colori per i cluster
+    #colors = ['c', 'y', 'b', 'orange', 'm', 'g', 'k', 'purple']
     all_colors = list(mcolors.CSS4_COLORS.keys())
-    colori=all_colors[:50]
+    colors=all_colors[:50]
 
-    plt.scatter(punti_x, punti_y, c=[colori[int(punto[2])] for punto in punti], label='Punti')
-    plt.scatter(centroidi_x, centroidi_y, c='red', marker='x', label='Centroidi')
+    plt.scatter(points_x, points_y, c=[colors[int(point[2])] for point in points], label='Points')
+    plt.scatter(centroids_x, centroids_y, c='red', marker='x', label='Centroids')
 
     plt.xlabel('X')
     plt.ylabel('Y')
-    plt.title('Punti e Centroidi')
+    plt.title('Points and centroids')
     plt.grid(True)
     plt.show()
 
-nome_file_csv = ("../KmeansParallel/cmake-build-release/output50.csv")
-punti, centroidi = leggi_file_csv(nome_file_csv)
-disegna_punti_e_centroidi(punti, centroidi)
+csv_file_name = ("../KmeansParallel/cmake-build-release/output50.csv")
+points, centroids = leggi_file_csv(csv_file_name)
+disegna_punti_e_centroidi(points, centroids)
