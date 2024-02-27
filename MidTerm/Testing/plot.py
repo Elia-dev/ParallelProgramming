@@ -2,14 +2,14 @@ import matplotlib.pyplot as plt
 import matplotlib.colors as mcolors
 import csv
 def leggi_file_csv(nome_file):
-    punti = []
+    points = []
     centroidi = []
 
     with open(nome_file, 'r') as file:
         reader = csv.reader(file)
         for riga in reader:
             elemento = list(map(float, riga))
-            if len(elemento) == 3:  # Se la terza coordinata è intera, è un punto
+            if len(elemento) == 3:  # If there is a third value, then it's a point otherwise is a centroid
                 punti.append(elemento)
             else:
                 centroidi.append(elemento)
@@ -23,7 +23,7 @@ def disegna_punti_e_centroidi(punti, centroidi):
     centroidi_x = [centroide[0] for centroide in centroidi]
     centroidi_y = [centroide[1] for centroide in centroidi]
 
-    # Colore in base al cluster di appartenenza per i punti
+    # Color based by the associeted cluster
     #colori = ['c', 'y', 'b', 'orange', 'm', 'g', 'k', 'purple']  # Possibili colori per i cluster
     all_colors = list(mcolors.CSS4_COLORS.keys())
     colori=all_colors[:50]
@@ -37,7 +37,6 @@ def disegna_punti_e_centroidi(punti, centroidi):
     plt.grid(True)
     plt.show()
 
-#nome_file_csv = ("../provaParallela2/cmake-build-release/output50.csv")
-nome_file_csv = ("../provaParallela3/cmake-build-release/output50.csv")
+nome_file_csv = ("../KmeansParallel/cmake-build-release/output50.csv")
 punti, centroidi = leggi_file_csv(nome_file_csv)
 disegna_punti_e_centroidi(punti, centroidi)
