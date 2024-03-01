@@ -23,13 +23,10 @@ class Point {
 public:
     double x, y;     // Point's coordinates
     int cluster;     // Cluster assigned to the point
-    double minDistance; // Distance from the cluster
 public:
     Point(double x, double y) {
         this->x = x;
         this->y = y;
-        this->minDistance = __DBL_MAX__; // Set the default distance from the nearest cluster
-        // equals to the maximum representable floating point number
         this->cluster = -1; // Initial cluster is null, first cluster is the number zero
     }
 };
@@ -110,12 +107,12 @@ int main(int argc, char const *argv[]) {
 #pragma omp parallel for reduction(+:sumXYCount[:3*centroidsNumber])
 #endif
         for (int i = 0; i < numPoints; i++) {
-            points[i].minDistance = __DBL_MAX__; // Reset of minDistance for each iteration
+            float minDistance = __DBL_MAX__; // Reset of minDistance for each iteration
             int cluster = -1;
             for (int j = 0; j < centroidsNumber; j++) {
                 int d = pow(points[i].x - centroids[j].x, 2) + pow(points[i].y - centroids[j].y, 2);
-                if (d < points[i].minDistance) {
-                    points[i].minDistance = d;
+                if (d < minDistance) {
+                    minDistance = d;
                     cluster = j;
                 }
             }
