@@ -1,3 +1,5 @@
+Caratteristiche:
+
 Laptop System: ASUSTeK product: TUF Gaming FX505DV_FX505DV
 Distro: Ubuntu 22.04.4 LTS
 Kernel: 6.5.0-21-generic x86_64
