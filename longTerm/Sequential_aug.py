@@ -2,22 +2,8 @@ import os
 import shutil
 import sys
 import time
-
 import albumentations as A
 import cv2
-import numpy as np
-from PIL import Image
-'''
-    Struttura programma:
-
-    Per ogni immagine del dataset:
-        - Carica immagine
-        Ripeti 10 volte:
-            Processa immagine con modifiche random
-            Salva immagine su disco
-
-    Quindi se nel dataset ci sono 20 immagini il numero finale di immagini modificate sarà 20 * 10 
-'''
 
 cv2.setNumThreads(0)
 num_augmentations = int(sys.argv[1])
@@ -47,7 +33,6 @@ transform = A.Compose([
         A.Rotate(limit=360, p=1),
         A.RandomBrightnessContrast(p=1),
         A.GaussianBlur(blur_limit=(3, 9), p=1),
-        #A.RandomCrop(height=250, width=300, p=1),
         A.ColorJitter(brightness=0.6, contrast=0.6, saturation=0.6, hue=0.6, p=0.5),
         A.RGBShift(r_shift_limit=40, g_shift_limit=40, b_shift_limit=40, p=0.5),
         A.ChannelShuffle(p=1),
@@ -56,20 +41,15 @@ transform = A.Compose([
         A.ToGray(p=0.5),
     ])
 
-print('Augmenting images...')
-start = time.time()
+print('Augmenting images...\n')
+
 j = 0
 for image in images:
     i = 0
     for i in range(num_augmentations):
-        # Eseguie l'augmentation dell'immagine
-        #augmented_image = transform(image=np.array(image))['image'] #Non so la differenza tra questa riga e quella sotto che usa Machins, funzionano entrambe
+        # Augmenting image
         augmented_image = transform(image=image)['image']
-        # Salva l'immagine augmentata
-        #augmented_image = Image.fromarray(augmented_image)  #Se usiamo cv2 per scrivere questa riga non deve essere attiva sennò non compila
-        #augmented_image.save('./' + folder_out + '/augmented_image' + str(j) + '_' + str(i) + '.jpg')
+        # Writing augmented image on disk
         cv2.imwrite('./' + folder_out + '/augmented_image' + str(j) + '_' + str(i) + '.jpg', augmented_image)
     j = j + 1
-end = time.time()
-total = end - start
-print(f'finished in {total:.4} seconds')
+print("Done")
