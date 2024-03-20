@@ -6,10 +6,13 @@ import albumentations as A
 import cv2
 from joblib import Parallel, delayed
 
+folder_in = 'input_images_100/'
+folder_out = 'output_images/'
+
 def imgAugmentation(imagesPath, num_augmentations):
     cv2.setNumThreads(0)
-    folder_in = 'input_images_100/'
-    folder_out = 'output_images/'
+    global folder_in
+    global folder_out
     images = []
     for path in imagesPath:
         images.append(cv2.imread(folder_in + path))
@@ -43,8 +46,6 @@ def imgAugmentation(imagesPath, num_augmentations):
 
 
 if __name__ == '__main__':
-    folder_in = 'input_images_100/'
-    folder_out = 'output_images/'
     num_augmentations = int(sys.argv[1])
     num_thread = int(sys.argv[2])
 
