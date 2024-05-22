@@ -33,12 +33,12 @@ transform = A.Compose([
         A.Rotate(limit=360, p=1),
         A.RandomBrightnessContrast(p=1),
         A.GaussianBlur(blur_limit=(3, 9), p=1),
-        A.ColorJitter(brightness=0.6, contrast=0.6, saturation=0.6, hue=0.6, p=0.5),
-        A.RGBShift(r_shift_limit=40, g_shift_limit=40, b_shift_limit=40, p=0.5),
+        A.ColorJitter(brightness=0.6, contrast=0.6, saturation=0.6, hue=0.6, p=1),
+        A.RGBShift(r_shift_limit=40, g_shift_limit=40, b_shift_limit=40, p=1),
         A.ChannelShuffle(p=1),
         A.RandomGamma(p=1),
         A.Blur(p=1),
-        A.ToGray(p=0.5),
+        A.ToGray(p=1),
     ])
 
 print('Augmenting images...\n')
