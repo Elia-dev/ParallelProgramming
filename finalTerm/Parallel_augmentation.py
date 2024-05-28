@@ -47,7 +47,7 @@ def imgAugmentation(imagesPath, num_augmentations):
 
 if __name__ == '__main__':
     num_augmentations = int(sys.argv[1])
-    num_thread = int(sys.argv[2])
+    num_process = int(sys.argv[2])
 
     # Cleaning workspace from old executions
     try:
@@ -66,9 +66,9 @@ if __name__ == '__main__':
         print("ERROR: import jpg dataset images into " + folder_in)
         sys.exit(1)
 
-    imageBatchSize = math.ceil(len(images_from_folder) / num_thread)
+    imageBatchSize = math.ceil(len(images_from_folder) / num_process)
     batches_for_process = [images_from_folder[i:i + imageBatchSize] for i in range(0, len(images_from_folder), imageBatchSize)]
     print(f'batches_for_process {batches_for_process}')
 
-    Parallel(n_jobs=num_thread)(delayed(imgAugmentation)(batch, num_augmentations) for batch in batches_for_process)
+    Parallel(n_jobs=num_process)(delayed(imgAugmentation)(batch, num_augmentations) for batch in batches_for_process)
     print("Done")
