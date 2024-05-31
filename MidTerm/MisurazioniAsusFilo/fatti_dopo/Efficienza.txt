@@ -1,0 +1,88 @@
+500k 5 centroidi
+Threads = 1: Efficienza = 1.1404800531920978
+Threads = 2: Efficienza = 0.8873459885163735
+Threads = 4: Efficienza = 0.6508500603433266
+Threads = 8: Efficienza = 0.4681785929369109
+Threads = 16: Efficienza = 0.252623462200521
+Threads = 32: Efficienza = 0.1226127635049256
+Threads = 64: Efficienza = 0.05539062150837368
+Threads = 128: Efficienza = 0.024336538440739814
+Threads = 256: Efficienza = 0.009727467149141641
+
+500k 50 centroidi
+Threads = 1: Efficienza = 1.095207901891254
+Threads = 2: Efficienza = 1.0306202748151783
+Threads = 4: Efficienza = 0.7942381048441755
+Threads = 8: Efficienza = 0.4995812883562173
+Threads = 16: Efficienza = 0.23520429311562152
+Threads = 32: Efficienza = 0.11895098745386548
+Threads = 64: Efficienza = 0.05893119467640322
+Threads = 128: Efficienza = 0.027871429484701085
+Threads = 256: Efficienza = 0.012855238934181211
+
+500k 250 centroidi
+Threads = 1: Efficienza = 1.1427091877111597
+Threads = 2: Efficienza = 1.0195311635248377
+Threads = 4: Efficienza = 0.7855604306527877
+Threads = 8: Efficienza = 0.4387459122492161
+Threads = 16: Efficienza = 0.22045215997348885
+Threads = 32: Efficienza = 0.11163478791971936
+Threads = 64: Efficienza = 0.05606086135967325
+Threads = 128: Efficienza = 0.02826742164029415
+Threads = 256: Efficienza = 0.0142106236076027
+
+500k 500 centroidi
+Threads = 1: Efficienza = 1.140909925098809
+Threads = 2: Efficienza = 1.035783481745629
+Threads = 4: Efficienza = 0.7828947156579024
+Threads = 8: Efficienza = 0.4395669248870092
+Threads = 16: Efficienza = 0.22085021585806225
+Threads = 32: Efficienza = 0.11411221364950425
+Threads = 64: Efficienza = 0.05710133992528156
+Threads = 128: Efficienza = 0.02865906522445295
+Threads = 256: Efficienza = 0.01440804429730632
+
+1mln 5 centroidi
+Threads = 1: Efficienza = 1.0040926964416153
+Threads = 2: Efficienza = 0.8188901250881137
+Threads = 4: Efficienza = 0.5490976662415121
+Threads = 8: Efficienza = 0.4324023167872335
+Threads = 16: Efficienza = 0.2329652539898364
+Threads = 32: Efficienza = 0.1163786128470943
+Threads = 64: Efficienza = 0.05502130658783447
+Threads = 128: Efficienza = 0.0251632865746764
+Threads = 256: Efficienza = 0.01087925788485022
+
+1mln 50 centroidi
+Threads = 1: Efficienza = 1.1105366058728687
+Threads = 2: Efficienza = 1.021194949531133
+Threads = 4: Efficienza = 0.7778107882339763
+Threads = 8: Efficienza = 0.4393907522953195
+Threads = 16: Efficienza = 0.2187238704504203
+Threads = 32: Efficienza = 0.1110783743135581
+Threads = 64: Efficienza = 0.056441564314334785
+Threads = 128: Efficienza = 0.026950515693456335
+Threads = 256: Efficienza = 0.01366823861832055
+
+1mln 250 centroidi
+Threads = 1: Efficienza = 1.1186767281326628
+Threads = 2: Efficienza = 1.0255470627314087
+Threads = 4: Efficienza = 0.7643805717476716
+Threads = 8: Efficienza = 0.42881551871467755
+Threads = 16: Efficienza = 0.21757767478948287
+Threads = 32: Efficienza = 0.11077326483411267
+Threads = 64: Efficienza = 0.05572261555941524
+Threads = 128: Efficienza = 0.0282562025955878
+Threads = 256: Efficienza = 0.01414531228269938
+
+1mln 500 centroidi
+Threads = 1: Efficienza = 1.130238067614415
+Threads = 2: Efficienza = 1.023164257386803
+Threads = 4: Efficienza = 0.7795933461189509
+Threads = 8: Efficienza = 0.4382114025302883
+Threads = 16: Efficienza = 0.22612928233835287
+Threads = 32: Efficienza = 0.11462771256206055
+Threads = 64: Efficienza = 0.05752666227424365
+Threads = 128: Efficienza = 0.028891279983434446
+Threads = 256: Efficienza = 0.01450723944955476
+
