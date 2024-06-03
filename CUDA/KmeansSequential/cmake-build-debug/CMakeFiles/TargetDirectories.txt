@@ -1,0 +1,3 @@
+/home/elia/Scrivania/Universita/Magistrale/ParallelProgramming/ParallelProgrammingProject/CUDA/KmeansSequential/cmake-build-debug/CMakeFiles/KmeansSequential.dir
+/home/elia/Scrivania/Universita/Magistrale/ParallelProgramming/ParallelProgrammingProject/CUDA/KmeansSequential/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/elia/Scrivania/Universita/Magistrale/ParallelProgramming/ParallelProgrammingProject/CUDA/KmeansSequential/cmake-build-debug/CMakeFiles/rebuild_cache.dir
