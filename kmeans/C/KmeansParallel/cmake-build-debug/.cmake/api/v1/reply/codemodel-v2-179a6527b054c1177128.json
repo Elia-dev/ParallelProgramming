@@ -49,8 +49,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "/home/elia/Scrivania/Universita/Magistrale/ParallelProgramming/ParallelProgrammingProject/MidTerm/KmeansParallel/cmake-build-debug",
-		"source" : "/home/elia/Scrivania/Universita/Magistrale/ParallelProgramming/ParallelProgrammingProject/MidTerm/KmeansParallel"
+		"build" : "/home/elia/Scrivania/Universita/Magistrale/ParallelProgramming/ParallelProgrammingProject/kmeans/C/KmeansParallel/cmake-build-debug",
+		"source" : "/home/elia/Scrivania/Universita/Magistrale/ParallelProgramming/ParallelProgrammingProject/kmeans/C/KmeansParallel"
 	},
 	"version" : 
 	{

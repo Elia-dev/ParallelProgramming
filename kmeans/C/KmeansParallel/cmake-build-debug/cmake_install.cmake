@@ -1,4 +1,4 @@
-# Install script for directory: /home/elia/Scrivania/Universita/Magistrale/ParallelProgramming/ParallelProgrammingProject/MidTerm/KmeansParallel
+# Install script for directory: /home/elia/Scrivania/Universita/Magistrale/ParallelProgramming/ParallelProgrammingProject/kmeans/C/KmeansParallel
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/elia/Scrivania/Universita/Magistrale/ParallelProgramming/ParallelProgrammingProject/MidTerm/KmeansParallel/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/elia/Scrivania/Universita/Magistrale/ParallelProgramming/ParallelProgrammingProject/kmeans/C/KmeansParallel/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

@@ -1,0 +1,1 @@
+/usr/bin/c++  -fopenmp -g CMakeFiles/KmeansParallel.dir/main.cpp.o -o KmeansParallel 
